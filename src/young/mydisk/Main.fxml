@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <!-- TODO Add Nodes -->
+  <top>
+    <HBox prefHeight="40.0" prefWidth="800.0">
+      <children>
+        <ImageView fitHeight="40.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../images/logo.PNG" />
+          </image>
+          <HBox.margin>
+            <Insets />
+          </HBox.margin>
+        </ImageView>
+      </children>
+    </HBox>
+  </top>
+</BorderPane>
