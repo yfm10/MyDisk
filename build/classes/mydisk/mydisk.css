@@ -1,0 +1,91 @@
+/* 
+    Document   : mydisk
+    Created on : 2013-7-10, 19:50:27
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+.application{
+     -fx-background-color: #333333; 
+}
+#paneWelcome{
+   -fx-background-color: rgb(185,185,185);  
+}
+
+#window-resize-button {
+    -fx-background-image: url("images/window-corner.png");
+    -fx-background-position: right 1px bottom 1px;
+    -fx-background-repeat: no-repeat;
+}
+
+.page-splitpane {
+    -fx-background-color: null;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+.page-splitpane *.split-pane-divider{
+    -fx-padding: 0 1 0 0;
+    -fx-background-color: transparent, #333333;
+    -fx-background-insets: 0 -3 0 -3, 0;
+    -fx-border-color: null;
+}
+.page-splitpane *.horizontal-grabber {
+    -fx-padding: 0;
+    -fx-shape: "";
+}
+.list-view{
+    -fx-background-color: null;
+}
+.list-cell:selected{
+    -fx-background-color:grey;
+    -fx-font-weight:bold;
+}
+.list-cell:empty{
+    -fx-background-color:null;
+}
+
+.window-close {
+    -fx-background-color:null;
+    -fx-background-position:center;
+    -fx-background-image: url("images/window-close.png");
+    -fx-background-repeat: no-repeat;
+}
+.window-min {
+     -fx-background-color:null;
+    -fx-background-position:center;
+    -fx-background-image: url("images/window-min.png");
+    -fx-background-repeat: no-repeat;
+}
+.window-max {
+     -fx-background-color:null;
+    -fx-background-position:center;
+    -fx-background-image: url("images/window-max.png");
+    -fx-background-repeat: no-repeat;
+}
+.window-close:focused:hover, .window-min:focused:hover , .window-max:focused:hover {
+    -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+.window-close:hover, .window-min:hover , .window-max:hover {
+    -fx-effect: dropshadow( three-pass-box , -fx-focus-color , 5, 0.7 , 0 , 0 );
+}
+#lbWelcome{
+   -fx-font-size:28;
+   -fx-alignment: CENTER;
+   -fx-content-display: CENTER;
+   -fx-text-alignment: CENTER;
+}
+
+#adLeft{
+    -fx-background-color: rgb(170,170,170);
+}
+#gpAddDisk{
+     -fx-background-color:whitesmoke;
+}
+#mbLeft{
+    -fx-background-color:#aeb5ba;
+}

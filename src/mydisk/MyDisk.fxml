@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import mydisk.controls.*?>
+<?import mydisk.controls.MainBorderPane?>
+<?import mydisk.controls.CardPane?>
+<?scenebuilder-classpath-element ../../build/classes?>
+<?scenebuilder-preview-i18n-resource i18n/mydisk_cn.properties?>
+<?scenebuilder-stylesheet mydisk.css?>
+
+<MainBorderPane id="MainPane" fx:id="root" prefHeight="600.0" prefWidth="860.0" styleClass="application" xmlns:fx="http://javafx.com/fxml" fx:controller="mydisk.MyDiskController">
+  <center>
+    <SplitPane fx:id="spMain" disable="false" dividerPositions="0.18895348837209303" styleClass="page-splitpane">
+      <items>
+        <Accordion fx:id="adLeft" minWidth="149.0" prefHeight="551.0" prefWidth="149.0">
+          <expandedPane>
+            <TitledPane fx:id="x3" animated="false" text="%application.disk">
+              <content>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                  <center>
+                    <ListView fx:id="listDisk" pickOnBounds="false" prefHeight="470.0" prefWidth="169.0" visible="true" />
+                  </center>
+                  <top>
+                    <MenuBar fx:id="mbLeft" BorderPane.alignment="TOP_LEFT">
+                      <menus>
+                        <Menu mnemonicParsing="false" text="%menu.title.new">
+                          <items>
+                            <MenuItem id="" mnemonicParsing="false" onAction="#addDisk" text="%menu.disk.baidu" fx:id="mnAddDiskBaidu" />
+                            <MenuItem mnemonicParsing="false" text="%menu.disk.king" />
+                            <MenuItem mnemonicParsing="false" text="%menu.disk.115" />
+                          </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="%menu.title.edit" />
+                        <Menu mnemonicParsing="false" text="%menu.title.delete" />
+                      </menus>
+                    </MenuBar>
+                  </top>
+                </BorderPane>
+              </content>
+            </TitledPane>
+          </expandedPane>
+          <panes>
+            <fx:reference source="x3" />
+            <TitledPane fx:id="x2" animated="false" text="%application.note">
+              <content>
+                <BorderPane prefHeight="200.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+          </panes>
+        </Accordion>
+        <CardPane fx:id="spContent" prefHeight="150.0" prefWidth="200.0">
+          <children>
+            <GridPane fx:id="paneWelcome" alignment="CENTER">
+              <Label fx:id="lbWelcome" prefHeight="170.0" prefWidth="300.0" text="%application.welcome" />
+            </GridPane>
+          </children>
+        </CardPane>
+      </items>
+    </SplitPane>
+  </center>
+  <top>
+    <ToolBar id="toptb" fx:id="tbMain" minHeight="47.0" onMouseClicked="#btMainOnMouseClicked" onMouseDragged="#btMainOnMouseDragged" onMousePressed="#tbMainOnMousePressed" prefHeight="47.0" prefWidth="800.0">
+      <items>
+        <ImageView id="logoimg" fx:id="imgLogo" fitHeight="40.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" x="0.0" y="1.0">
+          <image>
+            <Image url="@images/logo.png" />
+          </image>
+        </ImageView>
+        <Region prefHeight="37.0" prefWidth="9.0" />
+        <ImageView id="curdiskimg" fx:id="imgCurDiskType" fitHeight="32.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@images/baidu.png" />
+          </image>
+        </ImageView>
+        <VBox fx:id="vbDiskInfo" prefHeight="37.0" prefWidth="240.0">
+          <children>
+            <Label id="usernamelb" fx:id="lbUserName" prefHeight="20.0" prefWidth="240.0" text="mfy10@qq.com" />
+            <ProgressBar fx:id="pbUsage" prefHeight="14.0" prefWidth="240.0" progress="0.0" />
+          </children>
+        </VBox>
+        <Region fx:id="blankRg" prefHeight="37.0" prefWidth="240.0" />
+        <HBox alignment="TOP_RIGHT" prefHeight="37.0" prefWidth="156.0">
+          <children>
+            <Button fx:id="btSkin" mnemonicParsing="false" prefHeight="20.0" prefWidth="24.0" text="C">
+              <HBox.margin>
+                <Insets right="2.0" fx:id="x1" />
+              </HBox.margin>
+            </Button>
+            <MenuButton mnemonicParsing="false" prefHeight="20.0" prefWidth="24.0" HBox.margin="$x1">
+              <items>
+                <MenuItem mnemonicParsing="false" text="%menu.title.language" />
+                <MenuItem mnemonicParsing="false" text="%menu.title.help" />
+                <MenuItem mnemonicParsing="false" text="%menu.title.about" />
+              </items>
+            </MenuButton>
+            <Button fx:id="btMin" maxWidth="-1.0" mnemonicParsing="false" onAction="#min" prefHeight="20.0" prefWidth="24.0" text="-" HBox.margin="$x1" />
+            <Button fx:id="btMax" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#toogleMaximized" prefHeight="20.0" prefWidth="24.0" styleClass="window-min" text="" HBox.margin="$x1" />
+            <Button fx:id="btExit" mnemonicParsing="false" onAction="#exit" prefHeight="20.0" prefWidth="24.0" styleClass="window-close" text="">
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </Button>
+          </children>
+          <padding>
+            <Insets right="1.0" top="1.0" />
+          </padding>
+        </HBox>
+      </items>
+    </ToolBar>
+  </top>
+</MainBorderPane>

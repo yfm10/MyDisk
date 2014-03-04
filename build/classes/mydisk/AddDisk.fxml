@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-preview-i18n-resource i18n/mydisk_cn.properties?>
+
+<GridPane fx:id="gpAddDisk" alignment="CENTER" hgap="5.0" prefHeight="400.0" prefWidth="600.0" vgap="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="mydisk.AddDiskController">
+  <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.rowIndex="0">
+    <image>
+      <Image url="@images/baidu.png" />
+    </image>
+  </ImageView>
+  <Label fx:id="lbDiskInfo" alignment="CENTER" prefHeight="48.0" prefWidth="189.0" style="-fx-font: NORMAL 20 Tahoma;" text="%menu.disk.baidu" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+  <Label alignment="CENTER_RIGHT" prefWidth="48.0" text="%label.text.name" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+  <Label alignment="CENTER_RIGHT" prefWidth="48.0" text="%label.text.password" textAlignment="RIGHT" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+  <TextField fx:id="userName" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+  <PasswordField fx:id="password" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+  <HBox alignment="CENTER_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+    <children>
+      <CheckBox fx:id="autologin" text="%checkbox.text.auto">
+        <HBox.margin>
+          <Insets right="20.0" />
+        </HBox.margin>
+      </CheckBox>
+      <Button mnemonicParsing="false" onAction="#canel" text="%button.text.cancel" textAlignment="CENTER">
+        <HBox.margin>
+          <Insets right="15.0" />
+        </HBox.margin>
+      </Button>
+      <Button fx:id="btYes" alignment="TOP_RIGHT" cancelButton="false" mnemonicParsing="false" onAction="#addDisk" text="%button.text.yes" textAlignment="CENTER" />
+    </children>
+  </HBox>
+  <Hyperlink fx:id="link" alignment="CENTER_RIGHT" onAction="#linkToReg" prefWidth="48.0" text="%hyper.text.reg" textAlignment="RIGHT" textFill="RED" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+  <Label fx:id="errMsg" prefHeight="24.0" prefWidth="253.0" textFill="RED" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+  <padding>
+    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+  </padding>
+</GridPane>

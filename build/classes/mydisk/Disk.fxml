@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" fx:controller="mydisk.DiskController">
+  <center>
+    <VBox prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <ToolBar prefHeight="49.0" prefWidth="600.0">
+          <items>
+            <Button mnemonicParsing="false" text="Button" />
+          </items>
+        </ToolBar>
+        <SplitPane dividerPositions="0.20066889632107024" focusTraversable="true" prefHeight="380.0" prefWidth="600.0">
+          <items>
+            <TreeView prefHeight="334.0" prefWidth="164.0" />
+            <StackPane prefHeight="150.0" prefWidth="200.0">
+              <children>
+                <FlowPane fx:id="fpDisk" prefHeight="200.0" prefWidth="200.0" />
+              </children>
+            </StackPane>
+          </items>
+        </SplitPane>
+      </children>
+    </VBox>
+  </center>
+  <stylesheets>
+    <URL value="@mydisk.css" />
+  </stylesheets>
+  <top>
+    <ToolBar prefHeight="35.0" prefWidth="600.0">
+      <items>
+        <Button mnemonicParsing="false" text="Button" />
+      </items>
+    </ToolBar>
+  </top>
+</BorderPane>
